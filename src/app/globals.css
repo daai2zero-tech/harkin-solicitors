@@ -16,3 +16,42 @@ body {
   font-family: 'Georgia', 'Times New Roman', serif;
   -webkit-font-smoothing: antialiased;
 }
+
+/* ── Responsive utilities ── */
+.nav-links-hk { display: flex; align-items: center; gap: 32px; }
+.nav-hamburger-hk { display: none; cursor: pointer; background: none; border: none; padding: 4px; }
+@media (max-width: 768px) {
+  .nav-links-hk { display: none; }
+  .nav-links-hk.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #ffffff; padding: 20px 24px; gap: 20px; z-index: 200; border-top: 1px solid #e5e7eb; box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+  .nav-hamburger-hk { display: block; }
+}
+
+.hero-grid-hk { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+@media (max-width: 900px) { .hero-grid-hk { grid-template-columns: 1fr; gap: 40px; } }
+
+.services-grid-hk { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
+@media (max-width: 480px) { .services-grid-hk { grid-template-columns: 1fr; } }
+
+.stats-grid-hk { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+@media (max-width: 480px) { .stats-grid-hk { grid-template-columns: 1fr; } }
+
+.team-grid-hk { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+@media (max-width: 768px) { .team-grid-hk { grid-template-columns: 1fr; } }
+
+.contact-grid-hk { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+@media (max-width: 768px) { .contact-grid-hk { grid-template-columns: 1fr; gap: 40px; } }
+
+.footer-grid-hk { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; }
+@media (max-width: 768px) { .footer-grid-hk { grid-template-columns: 1fr 1fr; gap: 32px; } }
+@media (max-width: 480px) { .footer-grid-hk { grid-template-columns: 1fr; } }
+
+.footer-bottom-hk { display: flex; justify-content: space-between; align-items: center; }
+@media (max-width: 640px) { .footer-bottom-hk { flex-direction: column; gap: 12px; text-align: center; } }
+
+.section-pad-hk { padding: 96px 24px; }
+@media (max-width: 768px) { .section-pad-hk { padding: 64px 20px; } }
+
+.cta-section-hk { padding: 80px 24px; }
+@media (max-width: 768px) { .cta-section-hk { padding: 56px 20px; } }
+
+@media (max-width: 768px) { .mobile-hide-hk { display: none !important; } }

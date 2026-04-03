@@ -208,24 +208,22 @@ function Hero() {
       position: 'relative', overflow: 'hidden',
     }}>
       {/* Subtle gold radial accent */}
-      <div style={{
+      <div className="mobile-hide-hk" style={{
         position: 'absolute', inset: 0,
         backgroundImage: `radial-gradient(ellipse 80% 60% at 70% 50%, rgba(201,168,76,0.05) 0%, transparent 70%)`,
         pointerEvents: 'none',
       }} />
       {/* Thin vertical line */}
-      <div style={{
+      <div className="mobile-hide-hk" style={{
         position: 'absolute', top: 0, left: '8%',
         width: '1px', height: '100%',
         background: `linear-gradient(180deg, transparent 0%, ${C.goldBorder} 40%, transparent 100%)`,
       }} />
 
-      <div style={{
+      <div className="hero-grid-hk" style={{
         position: 'relative', zIndex: 1,
         maxWidth: '1200px', margin: '0 auto',
         padding: '80px 32px', width: '100%',
-        display: 'grid', gridTemplateColumns: '1fr 1fr',
-        gap: '80px', alignItems: 'center',
       }}>
         {/* Left */}
         <div>
@@ -350,8 +348,7 @@ function Hero() {
             </div>
 
             {/* Stats */}
-            <div style={{
-              display: 'grid', gridTemplateColumns: '1fr 1fr',
+            <div className="stats-grid-hk" style={{
               gap: '1px', background: C.divider,
               marginTop: '40px',
             }}>
@@ -460,9 +457,7 @@ function Services() {
         </div>
 
         {/* Cards grid */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))',
+        <div className="services-grid-hk" style={{
           gap: '1px', background: C.divider,
         }}>
           {practiceAreas.map((area, i) => (
@@ -526,10 +521,8 @@ function About() {
     <section id="about" style={{
       background: C.bg, padding: '120px 32px',
     }}>
-      <div style={{
+      <div className="contact-grid-hk" style={{
         maxWidth: '1200px', margin: '0 auto',
-        display: 'grid', gridTemplateColumns: '1fr 1fr',
-        gap: '96px', alignItems: 'start',
       }}>
         {/* Left */}
         <div>
@@ -646,9 +639,7 @@ function Team() {
           </h2>
         </div>
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
+        <div className="team-grid-hk" style={{
           gap: '24px',
         }}>
           {team.map((member, i) => (
@@ -822,8 +813,7 @@ function Contact() {
           </h2>
         </div>
 
-        <div style={{
-          display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: '64px',
+        <div className="contact-grid-hk" style={{
           alignItems: 'start',
         }}>
           {/* Left — info */}
@@ -969,9 +959,8 @@ function Footer() {
         maxWidth: '1200px', margin: '0 auto',
         padding: '64px 32px 32px',
       }}>
-        <div style={{
-          display: 'grid', gridTemplateColumns: '2fr 1fr 1fr',
-          gap: '64px', marginBottom: '48px',
+        <div className="footer-grid-hk" style={{
+          marginBottom: '48px',
         }}>
           <div>
             <div style={{
@@ -1029,11 +1018,10 @@ function Footer() {
           </div>
         </div>
 
-        <div style={{
+        <div className="footer-bottom-hk" style={{
           borderTop: `1px solid ${C.divider}`,
           paddingTop: '24px',
-          display: 'flex', justifyContent: 'space-between',
-          alignItems: 'center', flexWrap: 'wrap', gap: '12px',
+          flexWrap: 'wrap', gap: '12px',
         }}>
           <p style={{ fontFamily: "'Inter', Arial, sans-serif", fontSize: '12px', color: '#3a3830' }}>
             © {new Date().getFullYear()} Harkin & Associates Solicitors. Regulated by the Law Society of Northern Ireland.
